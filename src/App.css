@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-family: Lato, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+body {
+  margin: 0;
+}
+body {
+  padding: 2rem;
+  background: #eeeef6;
+}
+.app {
+  padding: 0 0 3px;
+  max-width:720px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.app::after {
+  display: block;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  border-radius: 0 0 50px 50px;
+  background: linear-gradient(to right, #5c3df5, #3d5cf5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todolist-title{
+padding: 0 0 3px;
+max-width:720px;
+margin: 0 auto;
+overflow: hidden;
+position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: .1ch;
+  color: #121221;
+  margin: 0 0 1em;
+  padding: 0 0 1em;
+  line-height: 1;
+  position: relative;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1:after {
+  display: block;
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 80px;
+  bottom: 0;
+  background: #5c3df5;
+}
+.todo-form {
+  margin: 0;
+  display: block;
+  padding: 1rem;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #dedeed;
+}
+.todo-input {
+  margin: 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+input[type=text] {
+  font-weight: 300;
+  display: block;
+  background: transparent;
+  color: #5c3df5;
+  border: none;
+  height: 2rem;
+  width:92%;
+  line-height: 2rem;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: 300ms ease;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type=text]:focus {
+  background: #f8f8f8;
+}
+.todo-add-button {
+  float: right;
+}
+.todo-add-button {
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  font-family: inherit;
+  font-size: .8rem;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  margin: auto;
+  font-size: 2rem;
+  background: transparent;
+  transition: 150ms ease;
+}
+.todo-add-button svg {
+  display: block;
+  stroke-width: 2px;
+  stroke-linecap: square;
+  width: 100%;
+  height: 100%;
+  stroke: #5c3df5;
+}
+.todo-add-button :hover {
+  stroke: #e6e6e6;
+  transition: 150ms ease;
+}
+.todo-add-button :active {
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 150ms ease;
 }

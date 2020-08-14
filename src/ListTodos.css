@@ -1,0 +1,42 @@
+.list {
+  padding: .25rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.list p {
+    width:92%;
+}
+.todo-remove-button {
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    font-size: .8rem;
+    position: relative;
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    padding: 0;
+    background: transparent;
+    transition: 300ms ease;
+  }
+  .todo-remove-button svg {
+    display: block;
+    stroke: #555;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    width: 100%;
+    height: 100%;
+    stroke: #dedeed;
+  }
+  .todo-remove-button:hover svg {
+    stroke: #e14;
+  }
+  .todo-remove-button::before {
+    transform: rotate(-45deg);
+  }
+  .todo-remove-button::after {
+    transform: rotate(45deg);
+  }
